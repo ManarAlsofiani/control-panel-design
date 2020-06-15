@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title></title>
+
+<!-- style Section  -->
+    <style >
+
+      #stop {
+        position: absolute;
+        margin-left: 650px;
+        margin-top: 400px;
+        font-size: 40px;
+      }
+
+      #up {
+        position: absolute;
+        left: 640px;
+        animation: myfirst 5s  infinite;
+        animation-play-state: paused;
+        font-size: 40px;
+
+      }
+
+      #right {
+        position: absolute;
+        top: 400px;
+        animation: my4 5s  infinite;
+        animation-play-state: paused;
+        font-size: 40px;
+
+      }
+
+      #left {
+        position: absolute;
+        top: 400px;
+        animation: my3 5s  infinite;
+        animation-play-state: paused;
+        font-size: 40px;
+
+      }
+
+      #down {
+        position:absolute ;
+        left: 640px;
+        animation: my2 5s  infinite;
+        animation-play-state: paused;
+        font-size: 40px;
+
+      }
+    /* controls the buttons steps  */
+
+      @keyframes myfirst {
+        from {top: 330px;}
+        to {top: 0px;}
+        }
+      @keyframes my2 {
+          from {top: 490px;}
+          to {top: 800px;}
+          }
+      @keyframes my3 {
+         from {left: 530px;}
+         to {left: 0px;}
+         }
+
+      @keyframes my4 {
+         from {left: 750px;}
+         to {left: 1400px;}
+         }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- four buttons -->
+    <button id='stop' type="button" name="Stop" onclick="STOP()">⏸</button>
+
+    <button id='right' onclick="Playright()">▶️➡️</button>
+
+    <button id='left' onclick="Playleft()">▶️⬅️</button>
+
+    <button id='down'  onclick="Playdown()" >▶️⬇️</button>
+
+    <button id='up' onclick="Playup()">▶️⬆️</button>
+<!-- --------------------------------------------------  -->
+
+    <script>
+      <!--  Playup():   animate button to up -->
+    function Playup() {
+      document.getElementById("up").style.animationPlayState = "running";
+    }
+  <!--  Playright():   animate button to right -->
+    function Playright() {
+      document.getElementById("right").style.animationPlayState = "running";
+    }
+  <!--  Playleft():   animate button to left -->
+    function Playleft() {
+      document.getElementById("left").style.animationPlayState = "running";
+    }
+  <!--  Playdown():   animate button to down -->
+    function Playdown() {
+      document.getElementById("down").style.animationPlayState = "running";
+    }
+
+    <!--  STOP():  stop animate for all buttons -->
+    function STOP() {
+        document.getElementById("up").style.animationPlayState = "paused";
+        document.getElementById("right").style.animationPlayState = "paused";
+        document.getElementById("down").style.animationPlayState = "paused";
+        document.getElementById("left").style.animationPlayState = "paused";
+
+    }
+    </script>
+  </body>
+</html>
